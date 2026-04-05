@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Library Project</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(90deg, rgb(102, 0, 128), #00fff2);
+        padding: 30px;
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+
+      /* Form */
+      form {
+        max-width: 400px;
+        margin: 0 auto;
+        /* background: #ffffff; */
+        background: linear-gradient(90deg, rgb(204, 223, 207), #cfd6df);
+
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      label {
+        display: block;
+        margin-top: 12px;
+        font-size: 14px;
+      }
+
+      input,
+      select,
+      button {
+        width: 100%;
+        margin-top: 5px;
+        padding: 8px;
+        font-size: 14px;
+      }
+
+      input,
+      select {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      button {
+        margin-top: 20px;
+        background: #ff1100;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+
+      /* File size group */
+      #fileSizeGroup {
+        display: none;
+      }
+
+      /* Library output */
+      #library {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 15px;
+        background: linear-gradient(90deg, rgb(34, 2, 190), #6004d0);
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        color:white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Enter Book Info</h1>
+
+    <form id="bookForm">
+      <label for="bookType">Select Type</label>
+      <select id="bookType" required>
+        <option value="Book">Book</option>
+        <option value="EBook">EBook</option>
+      </select>
+
+      <label for="title">Title</label>
+      <input type="text" id="title" required />
+
+      <label for="author">Author</label>
+      <input type="text" id="author" required />
+
+      <label for="year">Year Published</label>
+      <input type="number" id="year" min="1000" max="2100" required />
+
+      <div id="fileSizeGroup">
+        <label for="fileSize">File Size (MB)</label>
+        <input type="number" id="fileSize" min="0" step="0.1" />
+      </div>
+
+      <button type="submit">Add Book</button>
+    </form>
+
+    <!-- HAL DIV OO FORM-KA BAXSAN -->
+    <h2>Library Books</h2>
+    <div id="library"></div>
+
+    <script src="OnlineBookInfo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>digital clock</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #1a1a2e;
+        }
+        .clock-container{
+            background-color: #16213e;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10 25px rgba(0,0,0,0.4);
+            width: 90%;
+            max-width: 450px;
+        }
+        .time{
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+            text-shadow:0 0 10px rgba(233,69,96,0.4) ;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            gap: 15px;
+        }
+        .time-ampm{
+            font-size: 1.3rem;
+            color: #8f8f8f;
+        }
+        .date{
+            font-size: 1.3rem;
+            text-align: center;
+            color: #8f8f8f;
+
+        }
+    </style>
+  </head>
+  <body>
+    <div class="clock-container">
+      <div class="time">
+        <span class="hourse-minuts"></span>
+        <span class="time-ampm">pm</span>
+      </div>
+      <div class="date"></div>
+    </div>
+    <script src="digitalclock.js"></script>
+  </body>
+</html>
